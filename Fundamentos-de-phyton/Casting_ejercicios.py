@@ -13,7 +13,7 @@ Conversión de tipos de datos (casting) en Python.
 # d) De las cadenas anteriores, indica su valor booleano. Nota especificar por qué el resultado de la cadena "O"
 '''
 
-
+#.
 # *****   Conversión de número a cadena     *****
 var_int = 3.14159265
 print()
