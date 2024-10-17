@@ -1,9 +1,3 @@
-#Tania Garcia Flores
-#25 de Agosto de 2005.
-'''''
-Descripción:
-Usos de los tipos básico de datos en Python.
-'''
 
 # Notas:
 """
