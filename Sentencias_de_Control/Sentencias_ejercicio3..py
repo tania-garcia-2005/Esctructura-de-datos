@@ -24,21 +24,22 @@ d) Muestre el descuento y el total a pagar en consola utilizando dos decimales.
 '''
 
 
-Cantidad=float(input("Ingrese su cantidad comprada en la tienda: "))
-membresia= input("Cuenta con la membresía?(si/no): ")
+Cantidad=float(input("Ingrese su cantidad comprada en la tienda: "))#Letrero.
+membresia= input("Cuenta con la membresía?(si/no): ")#Letrero.
 membresia=membresia.lower()=="si"
+#Realiza las comparaciones correpondientes.
 if membresia:
     if Cantidad >= 1000:
-        total= Cantidad * 0.08
+        total= Cantidad * 0.08#Aplica el descuento del 8%.
         pagar= Cantidad - total
         print(f"Tu descuento es del 8% {pagar:.2f} ")
 
     else:
-        total = Cantidad * 0.05
+        total = Cantidad * 0.05#Aplica el descuento de 5%.
         pagar = Cantidad - total
         print(f"Tu descuento es del 5% {pagar:.2f} ")
 
 else:
-    print("No obtiene ningún descuento,te invitamos  a ser miembro.")
+    print("No obtiene ningún descuento,te invitamos  a ser miembro.")#Este mesaje se imrpime si no se cumplen las condiciones anteriores.
 
 
