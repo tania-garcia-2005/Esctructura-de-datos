@@ -23,11 +23,11 @@ b) Solicite al usuario el dinero con el que cuenta.
 c) Utilice la lógica adecuada para determinar el mensaje.
 d) Muestre el mensaje adecuado en consola.
 '''
-edad=int(input("Ingrese su edad: "))
+edad=int(input("Ingrese su edad: "))#Letrero.
 presupuesto=float(input("Ingrese su presupuesto: "))
-if edad>=18:
-    if presupuesto>=250 :
+if edad>=18:#Si es ,ayor de 18 añospuede ingresar.
+    if presupuesto>=250 :#Si su presupiuesto es mayor o igual a $250 puede ingresar.
         print(f"¡Bienvenido a tu mejor bar!")
     else:
-          print("Lo sentimos, ya estamos por cerrar!")
+          print("Lo sentimos, ya estamos por cerrar!")#En caso de no cumplir con lo que se pide aparecera este mensaje.
 
