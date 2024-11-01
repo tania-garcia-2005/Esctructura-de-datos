@@ -32,6 +32,9 @@ d) Imprima el resultado en la consola. Nota: muestre únicamente 3 decimales en 
 
 e) Repita el menú hasta salir.
 '''
+#se declaro el valor del PI.
+
+#El contador no dbe inicializar en cero por que causa error.
 PI = 3.1416
 contador = 1
 while contador !=0:
@@ -47,6 +50,8 @@ while contador !=0:
 
     opcion = input("Seleccione una opción: ")
 
+    #Realiza las operaciónes correspondientes
+    #Entra a las ocpiones que se declararon en el menú.
     if opcion == '1':
         base = float(input("Ingrese la base del rectángulo: "))
         altura = float(input("Ingrese la altura del rectángulo: "))
