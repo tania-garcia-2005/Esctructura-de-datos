@@ -4,7 +4,7 @@ print("****   11 de Noviembre de 2024.    *****")
 print("****************************************")
 
 '''''
-Descripción:Realiza la 
+Descripción:Realiza la lista de los alumnos y la escribe en orden alfabetico,alreves,y como se ingresaron. 
 
 '''
 
