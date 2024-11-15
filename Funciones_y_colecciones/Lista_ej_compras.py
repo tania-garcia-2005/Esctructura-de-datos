@@ -40,8 +40,8 @@ while opcion!=0:
         print("----------------------------------------------------")
         print()
     elif opcion == 2:
-        nombre=input("nombre del producto")#ingresa el nombre del producto
-        cantidad=input("cantidad del producto")#ingresa la cantidad del producto
+        nombre=input("nombre del producto:")#ingresa el nombre del producto
+        cantidad=input("cantidad del producto:")#ingresa la cantidad del producto
 
         producto=[nombre,cantidad]#
         lista.append(producto)
@@ -50,15 +50,12 @@ while opcion!=0:
 
     elif opcion ==3:
         print()
-    elif opcion ==
-         print()
-        numero=int(input("ingrese su cantidad"))
-        i=1
-    while i<= numero:
-        ingresar=input("")
-    print("----------------------------------------------------")
-    print()
-
+        if eliminar > len(lista):
+            print("No hay tales productos")
+        else:
+            eliminar = int(input("ingrese el producto que desea eliminar:"))
+            lista.pop(eliminar)
+print("has salido del programa")
 
 
 #tengo 2 listas con 2 indices y tengo que ver cpomo borarr las listas para eliminar un rpoducto
