@@ -10,7 +10,7 @@ Descripción:Añadir producto a la lista de compras.
 
 
 def menu ():
-
+#Definicion del menú
     print("1)Ver lista")
     print("2)Añadir producto a la lista")#nombre y cantidad
     print("3)Eliminar producto de lista")
