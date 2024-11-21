@@ -1,6 +1,6 @@
 print("****************************************")
 print("****   Tania Garcia Flores.        *****")
-print("****   14 de Noviembre de 2024.    *****")
+print("****   19 de Noviembre de 2024.    *****")
 print("****************************************")
 
 '''''
@@ -34,7 +34,7 @@ punto1=(1,0)
 punto2=(5,3)
 print()
 print(f"cordenadas en tuplas:{punto1}{punto2}")
-#Desempaquetaod de tuplas
+#Desempaquetado de tuplas
 x1,y1=punto1
 x2,y2=punto2
 
