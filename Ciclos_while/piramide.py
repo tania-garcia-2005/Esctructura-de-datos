@@ -57,17 +57,15 @@ print("-------------------------------------------------------------------------
 print("Tercer triángulo")
 #Realiza el ciclo for para la impresion de un triangulo.
 '''
-**
  *
+
+**
 '''
-
-contador = fila
-
-for u in range(1, fila + 1) :
-    espacio = " " * u
-    asteriscos3 = "*" * contador
-    print(f" {espacio}{asteriscos3}")
-    contador-=1
+fila1 = fila
+contador = 0
+for z in range(1, fila1 + 1):
+    print(" " * (fila1 - z) + "*" * z)
+    print()
 
 print("----------------------------------------------------------------------------------")
 
