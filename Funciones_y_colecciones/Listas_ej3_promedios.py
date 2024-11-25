@@ -17,7 +17,7 @@ Ingles = []
 Calificaciones = [Estructura_de_datos, Derecho, Contabilidad, Algebra, Electronica,Ingles]
 Posicion = 0
 Opcion = None
-
+#Definiciín de mi menú.
 while Opcion != 0:
     print("🌸ξξ(∵❤◡❤∵)ξξ·¯·♩¸ *** promedios del parcial  *** ¸♩·¯·ξξ(∵❤◡❤∵)ξξ🌸")
     print()
@@ -30,7 +30,8 @@ while Opcion != 0:
     print("0) Salir")
     print()
     Opcion = int(input("Ingresa una opción: "))
-
+#Funciones para cumplir con cada punto del menú.
+# Ejecuta la opción 1 del menú.
     if Opcion  == 1:
         print()
         if len(Estructura_de_datos) != 0:
@@ -44,6 +45,7 @@ while Opcion != 0:
              print()
         else:
             print("No existen alumnos para ver")
+    #Ejecuta la opción 2 del menú.
     elif Opcion == 2:
         print()
         if len(Estructura_de_datos) != 0:
@@ -52,7 +54,7 @@ while Opcion != 0:
         else:
             print("No hay alumnos por ver")
         print()
-
+    # Ejecuta la opción 3 del menú.
     elif Opcion  == 3:
         print()
         print("Ingrese las calificaciones del alumno")
@@ -69,8 +71,8 @@ while Opcion != 0:
         Calificaciones[3].append(Algebra_añdd)
         Calificaciones[4].append(Electronica_añdd)
         Calificaciones[5].append(Ingles_añdd)
-
         print()
+# Ejecuta la opción 4 del menú.
     elif Opcion  == 4:
         Eliminar_alumno = int(input("Ingrese el numero del alumno que deseas eliminar: "))
         del Estructura_de_datos[Eliminar_alumno]
@@ -79,7 +81,7 @@ while Opcion != 0:
         del Algebra[Eliminar_alumno]
         del Electronica [Eliminar_alumno]
         del Ingles[Eliminar_alumno]
-
+    # Ejecuta la opción 5 del menú.
     elif Opcion == 5:
         if len(Estructura_de_datos) != 0:
             Numero_de_alumnos = len(Estructura_de_datos)
@@ -101,6 +103,7 @@ while Opcion != 0:
         print()
         print("La opción es incorrecta")
         print()
+# Ejecuta la opción 0 del menú(sale del programa).
 if Opcion == 0:
     print()
     print("Usted ha salido del programa exitosamente")
