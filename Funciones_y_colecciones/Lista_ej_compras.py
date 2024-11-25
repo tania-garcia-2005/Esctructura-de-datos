@@ -1,61 +1,71 @@
-print("****************************************")
-print("****   Tania Garcia Flores.        *****")
-print("****   14 de Noviembre de 2024.    *****")
-print("****************************************")
+print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
+print("🍓🍓   Tania García Flores.   🍓🍓🍓🍓🍓")
+print("🍓🍓                          🍓🍓🍓🍓🍓")
+print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 
 '''''
-Descripción:Añadir producto a la lista de compras. 
-
+Descripción: Este programa crea una lista de compras.
 '''
 
-
-def menu ():
-#Definicion del menú
-    print("1)Ver lista")
-    print("2)Añadir producto a la lista")#nombre y cantidad
-    print("3)Eliminar producto de lista")
-    print("0)Salir")
+# Función para mi menú.
+def menu():  # Definición del menú
+    print("1) Ver lista")
+    print("2) Añadir producto a la lista")  # nombre y cantidad
+    print("3) Eliminar producto de lista")
+    print("0) Salir")
 
     print()
-    opcion = int(input("ingrese su opción:"))
+    opcion = int(input("Ingrese su opción:"))
 
     return opcion
 
-def  añadir_producto(lista_de_compras):
-
+def añadir_producto(lista_de_compras):
     print()
+
 ###################################################################
 print()
-print("****** Lista de compras ******")
+print("-----------------------------------------------------------------")
+print("****** ★彡『 LISTA DE COMPRAS 』彡★ ******")
+print("-----------------------------------------------------------------")
 print()
 
 lista = []
-opcion = None  # None sustituye al -1,para tener una variable opuesta a tu condiicioon del while(no tiene ningun valro)
-while opcion!=0:
+opcion = None  # None sustituye al -1, para tener una variable opuesta a tu condición del while (no tiene ningún valor)
+while opcion != 0:
     opcion = menu()
 
-
-    if opcion==1:
+    if opcion == 1:
         print(lista)
         print("----------------------------------------------------")
         print()
     elif opcion == 2:
-        nombre=input("nombre del producto:")#ingresa el nombre del producto
-        cantidad=input("cantidad del producto:")#ingresa la cantidad del producto
+        nombre = input("Nombre del producto:")  # Ingresa el nombre del producto
+        cantidad = input("Cantidad del producto:")  # Ingresa la cantidad del producto
 
-        producto=[nombre,cantidad]#
+        producto = [nombre, cantidad]  # Crea un producto con nombre y cantidad
         lista.append(producto)
         print("----------------------------------------------------")
         print()
 
-    elif opcion ==3:
-        print()
-        if eliminar > len(lista):
-            print("No hay tales productos")
+    elif opcion == 3:
+        print("Lista ")
+        contador = 0
+        for producto in lista:
+            print(f"{contador}) {producto[0]} -->> Cantidad: {producto[1]}")
+            contador= contador + 1
+        borrar = int(input("Ingrese el número del producto a eliminar: "))
+        if borrar > contador:
+            print(f"No hay {contador} productos")
+            print("------------------------------")
+            print()
         else:
-            eliminar = int(input("ingrese el producto que desea eliminar:"))
-            lista.pop(eliminar)
-print("has salido del programa")
+            borrar = borrar
+            lista.pop(borrar)
+            contador = contador - 1
+            print("El producto ha sido eliminado correctamente.")
 
-
-#tengo 2 listas con 2 indices y tengo que ver cpomo borarr las listas para eliminar un rpoducto
+print("Usted ha  salido del programa exitosamente.")
+print()
+print("------------------------------")
+print()
+print("Agradezco que halla utilizado este programa")
