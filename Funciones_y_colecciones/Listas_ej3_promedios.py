@@ -6,126 +6,103 @@ print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓"
 Descripción:Este programa realiza una lista de las calificaciones y ejecuta cada opción establecida en el menú.. 
 
 '''
-print(" *** PROMEDIOS DEL PARCIAL 1 *** ")
 
-# Lista para almacenar las calificaciones de los estudiantes.
-calificaciones = []
+# Listas  para almacenar las calificaciones de los estudiantes.
+Estructura_de_datos = []
+Derecho = []
+Contabilidad = []
+Algebra = []
+Electronica = []
+Ingles = []
+Calificaciones = [Estructura_de_datos, Derecho, Contabilidad, Algebra, Electronica,Ingles]
+Posicion = 0
+Opcion = None
 
-#Materias
-materias = ["ESTRUCTURA DE DATOS", "DERECHO Y LEGISLACIÓN", "CONTABILIDAD", "ELECTRÓNICA", "ÁLGEBRA"]
-#Definicion de mi menú.
-def menu():
-    print("0) Salir")
+while Opcion != 0:
+    print("🌸ξξ(∵❤◡❤∵)ξξ·¯·♩¸ *** promedios del parcial  *** ¸♩·¯·ξξ(∵❤◡❤∵)ξξ🌸")
+    print()
+    print("Bienvenido al menú de calificaciones")
     print("1) Ver calificaciones de alumno")
-    print("2) Ver promedios de alumnos")
+    print("2) Ver calificaciones de los alumnos")
     print("3) Añadir alumno")
     print("4) Eliminar alumno")
     print("5) Ver promedio grupal")
+    print("0) Salir")
+    print()
+    Opcion = int(input("Ingresa una opción: "))
 
-    opcion = int(input("Ingrese su selección: "))
-    return opcion
-#opción para ver las calificaciones.
-def ver_calificaciones():
-    if len(calificaciones) == 0:
-        print("No hay alumnos registrados.")
-    else:
-        nombre = input("Ingrese el nombre del alumno: ")
-        encontrado = 0
-        for alumno in calificaciones:
-            if alumno["nombre"].lower() == nombre.lower():
-                print(f"Calificaciones de {alumno["nombre"]}:")
-                for materia in materias:
-                    print(f"{materia}: {alumno["calificaciones"][materia]}")
-                encontrado = 1
-                break
-        if encontrado != 1:
-            print(f"Alumno {nombre} no encontrado.")
-#opción para ver el promedio de los alumnos.
-def promedio_alumnos():
-    if len(calificaciones) == 0:
-        print("No hay alumnos registrados.")
-    else:
-        print("Promedios de los alumnos:")
-        for alumno in calificaciones:
-            suma = 0
-            for materia in materias:
-                suma = suma + alumno["calificaciones"][materia]
-            promedio = suma / len(materias)
-            print(f"{alumno["nombre"]}: {promedio:.2f}")
-#opción para añadir a un alumno.
-def anadir_alumno():
-    nombre = input("Ingrese el nombre del  alumno: ")
-    existe = 0
-    for alumno in calificaciones:
-        if alumno["nombre"].lower() == nombre.lower():
-            print(f"El alumno {nombre} ya está registrado.")
-            existe = 1
-            break
-
-    if existe != 1:
-        calificaciones_alumno = {}
-        for materia in materias:
-            valido = 0
-            while valido == 0:
-                cal = input(f"Ingrese la calificación de {materia}: ")
-                if cal.isdigit() and 0 <= int(cal) <= 100:
-                    calificaciones_alumno[materia] = int(cal)
-                    valido = 1
-                else:
-                    print("Por favor ingrese un número válido entre 0 y 100.")
-        calificaciones.append({"nombre": nombre, "calificaciones": calificaciones_alumno})
-        print(f"Alumno {nombre} añadido exitosamente.")
-
-#opción para eliminar un alumno.
-def eliminar_alumno():
-    if len(calificaciones) == 0:
-        print("No hay alumnos registrados.")
-    else:
-        nombre = input("Ingrese el nombre del alumno que desea eliminar: ")
-        conte= -1
-        for u in range(len(calificaciones)):
-            if calificaciones[u]["nombre"].lower() == nombre.lower():
-                conte = u
-                break
-        if conte != -1:
-            del calificaciones[conte]
-            print(f"Alumno '{nombre}' eliminado exitosamente.")
+    if Opcion  == 1:
+        print()
+        if len(Estructura_de_datos) != 0:
+             Numero_alumno = int(input("Ingrese el número del alumno que desea visualizar: "))
+             print("Calificació|n del alumno ",Numero_alumno)
+             print(f" Estructura de datos: {Estructura_de_datos[Numero_alumno]}.")
+             print(f" Derecho: {Derecho[Numero_alumno]}.")
+             print(f" Contabilidad: {Contabilidad[Numero_alumno]}.")
+             print(f" Electronica: {Electronica[Numero_alumno]}.")
+             print(f" Inglés: {Ingles[Numero_alumno]}.")
+             print()
         else:
-            print(f"Alumno '{nombre}' no encontrado.")
+            print("No existen alumnos para ver")
+    elif Opcion == 2:
+        print()
+        if len(Estructura_de_datos) != 0:
+            for Calificacion in Calificaciones:
+                print(f" {Calificacion}")
+        else:
+            print("No hay alumnos por ver")
+        print()
 
-#opción para ver el promedio grupal.
-def promedio_grupal():
-    if len(calificaciones) == 0:
-        print("No hay alumnos registrados.")
+    elif Opcion  == 3:
+        print()
+        print("Ingrese las calificaciones del alumno")
+        Estructura_añdd = float(input("Estructuras de datos: "))
+        Derecho_añdd = float(input("Derecho: "))
+        Contabilidad_añdd = float(input("Contabilidad: "))
+        Algebra_añdd = float(input("Algebra: "))
+        Electronica_añdd = float(input("Electronica: "))
+        Ingles_añdd = float(input("Inglés: "))
+
+        Calificaciones[0].append(Estructura_añdd)
+        Calificaciones[1].append(Derecho_añdd)
+        Calificaciones[2].append(Contabilidad_añdd)
+        Calificaciones[3].append(Algebra_añdd)
+        Calificaciones[4].append(Electronica_añdd)
+        Calificaciones[5].append(Ingles_añdd)
+
+        print()
+    elif Opcion  == 4:
+        Eliminar_alumno = int(input("Ingrese el numero del alumno que deseas eliminar: "))
+        del Estructura_de_datos[Eliminar_alumno]
+        del Derecho[Eliminar_alumno]
+        del Contabilidad[Eliminar_alumno]
+        del Algebra[Eliminar_alumno]
+        del Electronica [Eliminar_alumno]
+        del Ingles[Eliminar_alumno]
+
+    elif Opcion == 5:
+        if len(Estructura_de_datos) != 0:
+            Numero_de_alumnos = len(Estructura_de_datos)
+            Contador = 0
+            Promedio_de_un_alumno = 0
+            Total = 0
+            while Contador < Numero_de_alumnos:
+                #calculo de calificación.
+                Promedio_de_un_alumno = (Estructura_de_datos[Contador] + Derecho[Contador] + Contabilidad[Contador] + Algebra[Contador] + Electronica[Contador] + Ingles[Contador])/6
+                Total = Total + Promedio_de_un_alumno
+                Contador += 1
+            Total = Total / Numero_de_alumnos
+            print("El promedio grupal es: ",Total)
+        else :
+            print()
+            print("No hay alumnos para promediar")
+        print()
     else:
-        suma_materias = {materia: 0 for materia in materias}
-        for alumno in calificaciones:
-            for materia in materias:
-                suma_materias[materia] += alumno["calificaciones"][materia]
-        print("Promedio grupal especifico por cada materia:")
-        for materia in materias:
-            promedio = suma_materias[materia] / len(calificaciones)
-            print(f"{materia}: {promedio:.2f}")
-#Llamada de las funciones.
-opcion = None
-
-while opcion != 0:
-    opcion = menu()
-    if opcion == 1:
-        ver_calificaciones()
-    elif opcion == 2:
-        promedio_alumnos()
-    elif opcion == 3:
-        anadir_alumno()
-    elif opcion == 4:
-        eliminar_alumno()
-    elif opcion == 5:
-        promedio_grupal()
-    elif opcion == 0:
-#mensajes.
-        print("Usted ha salido del programa exitosamente")
-    else:
-        print("Opción inválida. Por favor, intente nuevamente.")
-
+        print()
+        print("La opción es incorrecta")
+        print()
+if Opcion == 0:
+    print()
+    print("Usted ha salido del programa exitosamente")
 
 
