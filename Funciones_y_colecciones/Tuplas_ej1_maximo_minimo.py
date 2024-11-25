@@ -1,48 +1,85 @@
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 print("🍓🍓   Tania García Flores.        🍓🍓🍓")
-print("🍓🍓Fecha: 21 de Noviembre de 2024     🍓🍓")
+print("🍓🍓Fecha: 25 de Noviembre de 2024     🍓🍓")
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
-
-'''''
+print("-------------------------------------------------------------------------------------------------------------------------------------")
+print()
+'''
 Descripción: Este programa muestra el valor máximo y mínimo de una lista de números. En este caso, la tupla se utiliza para devolver los valores máximo y mínimo de la función.
 '''
 
+
 ###################################################################################################
-def menu ():
-#Definicion del menú
-    print("1)Ver lista de numeros")
-    print("2)Añadir número a la lista")#nombre y cantidad
-    print("3)Determinar el valor máximo y mínimo de la lista de números")
-    print("0)Salir")
 
+# Definición del menú
+def menu():
+    print("🌸ξξ(∵❤◡❤∵)ξξ·¯·♩¸ ***  Valor máximo y mínimo de una lista de números del usuario  *** ¸♩·¯·ξξ(∵❤◡❤∵)ξξ🌸")
+    print(
+        "-------------------------------------------------------------------------------------------------------------------------------------")
     print()
-    opcion = int(input("ingrese su opción:"))
-
+    print("1) Ver lista de números")
+    print("2) Añadir número a la lista")
+    print("3) Determinar el valor máximo y mínimo de la lista de números")
+    print("0) Salir")
+    print()
+    opcion = int(input("Ingrese su opción: "))
     return opcion
 
-
-def  añadir_numero(lista_de_numeros):
-
+#Etsa función esta encargada de mostras la lista de números y en caso de que la lista no tenga números imprime un mensaje indicando que no hay números.
+def muestra(lista):
+    if lista:
+        print(f"La lista de números es: {lista}")
+    else:
+        print("La lista no tiene ningún contenido.")
     print()
-###################################################################
-print("-------------------------------------------------------------------------------------------")
-print("****** 🌸ꗥ～ꗥ🌸  𝐕𝐚𝐥𝐨𝐫 𝐦á𝐱𝐢𝐦𝐨 𝐲 𝐦í𝐧𝐢𝐦𝐨 𝐝𝐞 𝐮𝐧𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐧ú𝐦𝐞𝐫𝐨𝐬 𝐝𝐞𝐥 𝐮𝐬𝐮𝐚𝐫𝐢𝐨  🌸ꗥ～ꗥ🌸 ******")
-print("-------------------------------------------------------------------------------------------")
-print()
-print()
 
+#La funcion agrega los números nuevos a la lsita inicial.
+def agregar(lista):
+    nuevo_nmr = float(input("Ingrese el número que desea agregar a la lista: "))
+    lista.append(nuevo_nmr)
+    print("El número ha sido agregado correctamente")
+    print()
+
+#Identifica que número de la lista es el máximo y mínimo (mayor o menor).
+def determina(lista):
+    mayor = lista[0]
+    for i in lista:
+        if i > mayor:
+            mayor = i
+    menor = lista[0]
+    for x in lista:
+        if x < menor:
+            menor = x
+    return (mayor, menor)
+
+
+#Eta es la lista de iniciación vacía.
 lista = []
-opcion = None  # None sustituye al -1,para tener una variable opuesta a tu condiicioon del while(no tiene ningun valor)
-while opcion!=0:
-    opcion = menu()
 
+#llamada del menú principal.
+opcion_usuario = None
+while opcion_usuario != 0:
+    opcion_usuario = menu()
 
-    if opcion==1:
-        print(lista)
-        print("----------------------------------------------------")
-        print()
+    if opcion_usuario == 1:
+        muestra(lista)
 
+    elif opcion_usuario == 2:
+        agregar(lista)
 
+    elif opcion_usuario == 3:
+        if lista:
+            tupla = tuple(lista)
+            mas, menos = determina(lista)
+            print(f"El número mayor es: {mas} y el número menor es: {menos}")
+            print()
+        else:
+            print("La lista está vacía")
+            print()
 
+    elif opcion_usuario > 3:
+        print("La opción no es válida.")
 
+    elif opcion_usuario == 0:
+        print("Usted ha salido exitosamente del programa.")
 
