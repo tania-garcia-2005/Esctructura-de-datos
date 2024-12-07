@@ -1,58 +1,63 @@
-from random import randint# .....................
+# Esta función se usa para generar números aleatorios.
+from random import randint
 
+# Mi portada.
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 print("🍓🍓   Tania García Flores.        🍓🍓🍓")
 print("🍓🍓Fecha: 24 de Noviembre de 2024     🍓🍓")
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 print()
 print("----------------------------------------------------------------------------------")
-#constantes para las opciones del juego.
+
+# Definición de mis variables para las opciones.
 PIEDRA = "Piedra"
 PAPEL = "Papel"
 TIJERAS = "Tijeras"
 
-
-# Función para mostrar mi menú y pedir la opción al usuario.
+#Defrinición de mi menú.
 def mostrar_menu():
     print()
     print("-----------------------------------------------------------------")
-    print("****** ★彡『 JUEGO DE PIEDRSA PAPEL O TIJERAS 』彡★ ******")
+    print("****** ★彡『 JUEGO DE PIEDRA PAPEL O TIJERAS 』彡★ ******")
     print("-----------------------------------------------------------------")
     print()
 
+# Muestro las: victorias, empates y derrotas de mi juego.
     print(f"Victorias del jugador: {victorias_jugador}, Empates: {empates}, Victorias del CPU: {victorias_cpu}")
     print("1) Piedra.")
     print("2) Papel.")
     print("3) Tijeras.")
     print("0) Salir.")
     print()
+
+#Solicito que el usuario ingrese una opción y la devuelve como número entero.
     opcion = int(input("Ingresa una opción: "))
     return opcion
 
-
-# variables de conteo
-victorias_jugador = 0
+# Definición de mis variables las cuales llevarán el conteo de victorias, empates y derrotas de mi juego.
+victorias_jugador = 0#se inicializan en cero y van sumandose según sea el caso.
 empates = 0
 victorias_cpu = 0
 
-#las utilice para las  elecciones
+#En estas variables se van a almacenar las elecciones del usuario(jugador) y de la cpu.
 jugador = ""
 cpu = ""
 
-
-opcion_jugador = None
+#Se repite mientras que el usuario no elija la opción cero la cúal hace que salga del juego.
+opcion_jugador = None#Es como si hubiese un -1.
 while opcion_jugador != 0:
-    # Muestra mi menú y obtiene  la opción ingresada por el usuario.
+    # Llamada a mi función menú para mostrar el menú y obtiene la opción que seleccionó el usuario.
     opcion_jugador = mostrar_menu()
 
+    # Si el usuario elige la opción cero, termina el juego.
     if opcion_jugador == 0:
-        print("Fin del juego. ¡Gracias por jugar!")
-        opcion_jugador = 0  #termina el bucle con el cero.
+        print("Usted ha salido exitosamente del juegos. ¡Gracias por jugar mi juego!")
+        opcion_jugador = 0
     else:
-        # La CPU elige aleatoriamente su eleccion .
-        opcion_cpu = randint(1, 3)
+        #La cpu elige una opción aleatoria entre:piedra, papel y tijera.
+        opcion_cpu = randint(1, 3)# de 1 a 3.
 
-        # elecciones de jugador y CPU.
+        #Elección del usuario.
         if opcion_jugador == 1:
             jugador = PIEDRA
         elif opcion_jugador == 2:
@@ -60,6 +65,7 @@ while opcion_jugador != 0:
         elif opcion_jugador == 3:
             jugador = TIJERAS
 
+        #Opción de la cpu.
         if opcion_cpu == 1:
             cpu = PIEDRA
         elif opcion_cpu == 2:
@@ -67,20 +73,18 @@ while opcion_jugador != 0:
         elif opcion_cpu == 3:
             cpu = TIJERAS
 
-        #  determinar el ganador
+        #Aquí determino los resultados del juego usando las compuertas lógicas and y or.
         if jugador == cpu:
-            empates += 1
+            empates += 1  # Si  son iguales, es empate.
             resultado = f"Empate. Jugador: {jugador}, CPU: {cpu}"
-        elif (jugador == PIEDRA and cpu == TIJERAS) or (jugador == PAPEL and cpu == PIEDRA) or (
-                jugador == TIJERAS and cpu == PAPEL):
+        elif (jugador == PIEDRA and cpu == TIJERAS) or (jugador == PAPEL and cpu == PIEDRA) or (jugador == TIJERAS and cpu == PAPEL):
             victorias_jugador += 1
             resultado = f"El ganador es el Jugador. Jugador: {jugador}, CPU: {cpu}"
         else:
-            victorias_cpu += 1
+            victorias_cpu += 1  # La cpu gana en cualquier otro caso.
             resultado = f"El ganador es el CPU. Jugador: {jugador}, CPU: {cpu}"
 
-        # Mostrar el resultado .
+        # Muestra el resultado de la ronda del juego y una línea.
         print(resultado)
         print("-" * 30)
-#si elige la opcio 0,sale del programa improimiendo el mensaje:
-print("Fin del juego. ¡Gracias por jugar!,has salido exitosamente del programa")
+
