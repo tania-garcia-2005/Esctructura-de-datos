@@ -2,7 +2,7 @@ from random import choice  # Importa la función choice para seleccionar de mane
 # Mi portada.
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 print("🍓🍓   Tania García Flores.        🍓🍓🍓")
-print("🍓🍓Fecha: 24 de Noviembre de 2024     🍓🍓")
+print("🍓🍓                                🍓🍓")
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
 print()
 print("----------------------------------------------------------------------------------")
