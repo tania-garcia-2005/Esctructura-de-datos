@@ -9,7 +9,7 @@ print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓"
 print()
 print("----------------------------------------------------------------------------------")
 
-# Definición de mis variables para las opciones.
+# Definición de mis contantes para las opciones y los posibles resultados.
 PIEDRA = "Piedra"
 PAPEL = "Papel"
 TIJERAS = "Tijeras"
