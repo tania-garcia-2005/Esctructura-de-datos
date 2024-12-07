@@ -92,7 +92,7 @@ while opcion != 0:
         print()
     elif opcion == 6:
         # Muestra las reglas del juego.
-        print("""Reglas:
+        print("""╏╠══[𝍖𝍖𝍖 𝚁𝚎𝚐𝚕𝚊𝚜 𝍖𝍖𝍖]      💦:
         - Tijeras cortan papel.
         - Papel cubre piedra.
         - Piedra aplasta lagarto.
