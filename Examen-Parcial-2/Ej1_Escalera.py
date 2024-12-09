@@ -54,12 +54,12 @@ def obtener_escalones():
     return numero
 
 
-# Título del programa.
+# Título de mi programa.
 print(" *  🌸ꗥ～ꗥ🌸 EJERCICIO 1_LA ESCALERA 🌸ꗥ～ꗥ🌸 * ")
 print()
 
 # Inicializa la variable para el ciclo.
-eleccion = None#(-1).
+eleccion = None  # (-1).
 
 # Hasta que el usuario ingrese 0 se sale del programa.
 while eleccion != 0:
@@ -81,11 +81,11 @@ while eleccion != 0:
 
     # Verifico si el número ingresado es negativo.
     elif eleccion < 0:
-        # Genero la escalera descendente (Hacia abajo).
-        print("_")  # Imprimo el primer escalón.
-        for paso in range(1, -eleccion + 1):  # Empieza desde 1 hasta el valor absoluto del número negativo ingresado.
-            # Calcula la cantidad de espacios necesarios para alinear el escalón descendente (Hacia abajo).
+        # Genero la escalera descendente (hacia abajo).
+        for paso in range(-eleccion):  # Desde 0 hasta el valor absoluto del número negativo ingresado.
+            # Aquí se calcula la cantidad de espacios necesarios para alinear el escalón descendente (hacia abajo).
             print(" " * (paso * 2) + "|_")  # Imprimí el escalón con los espacios y símbolo.
+        print("_")  # Imprime la base de la escalera al final.
 
     else:
         # En caso de ingresar otra cosa aparece:
