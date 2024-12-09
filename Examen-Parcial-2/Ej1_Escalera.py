@@ -50,18 +50,18 @@ def obtener_escalones():
     # Este número puede ser positivo (ascendente), negativo (descendente), o cero (para salir).
     numero = int(input(
         "Ingresa el número de escalones (positivo - ascendente y negativo - descendente) o ingresa un cero para salir: "))
-    print()  # Espacio.
+    print()
     return numero
 
 
-# Título del programa
+# Título del programa.
 print(" *  🌸ꗥ～ꗥ🌸 EJERCICIO 1_LA ESCALERA 🌸ꗥ～ꗥ🌸 * ")
 print()
 
-# Inicializa la variable para el ciclo(-1).
-eleccion = None
+# Inicializa la variable para el ciclo.
+eleccion = None#(-1).
 
-# Hasta que el usuario ingrese 0 sale.
+# Hasta que el usuario ingrese 0 se sale del programa.
 while eleccion != 0:
     # Guarda el número de escalones que el usuario ingresó al momento en el que se le solicitó.
     eleccion = obtener_escalones()
