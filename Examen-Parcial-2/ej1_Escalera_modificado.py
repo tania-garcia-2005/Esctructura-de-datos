@@ -41,7 +41,7 @@ while eleccion != 0:
             # Aquí se calcula la cantidad de espacios necesarios para alinear el escalón descendente (hacia abajo).
             print(" " * (-eleccion + 1 - paso) * 2 + "_|")
               # Imprimí el escalón con los espacios y símbolo.
-        print("_")  # Imprime la base de la escalera al final.
+
     # Verifico si el número ingresado es negativo.##
     elif eleccion > 0:
         # En este apartado hace la escalera ascendente (hacia arriba).
