@@ -34,7 +34,16 @@ print()
 print("----------------------------------------------------------------------------------")
 print()
 
-#Función
+# Mi portada.
+print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
+print("🍓🍓   Tania García Flores.        🍓🍓🍓")
+print("🍓🍓                                🍓🍓")
+print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
+print()
+print("----------------------------------------------------------------------------------")
+print()
+
+# Función
 def convertir_a_binario(numero_decimal):
     # Mi cadena vacía para guardar el número en binario.
     resultado_binario = ""
@@ -42,32 +51,30 @@ def convertir_a_binario(numero_decimal):
 
     # Convertí el número decimal a binario dividiendo entre el número 2.
     if valor == 0:  # Si el número es 0, el binario también es "0".
-        return "0"
+        resultado_binario = "0"
 
     while valor > 0:
         residuo = valor % 2  # Obtengo el residuo (0 o 1).
         resultado_binario = str(residuo) + resultado_binario  # Agrega el residuo al inicio.
         valor = valor // 2  # Aquí divide el número entre el número 2.
 
-    # Si el número original es 0, el resultado es 0.
     return resultado_binario
 
 def convertir_a_hexadecimal(numero_decimal):
-    #Cadena vacía que guardar el número en hexadecimal.
+    # Cadena vacía que guardar el número en hexadecimal.
     resultado_hexadecimal = ""
-    caracteres_hex = "0123456789ABCDEF"  #Estos son mis valores hexadecimales.
+    caracteres_hex = "0123456789ABCDEF"  # Estos son mis valores hexadecimales.
     valor = numero_decimal
 
     # Aquí se convierte el número decimal a hexadecimal dividiendo entre el número 16.
     if valor == 0:  # Si el número es 0, el hexadecimal también es "0".
-        return "0"
+        resultado_hexadecimal = "0"
 
     while valor > 0:
         residuo = valor % 16  # Se obtiene el residuo (0-15).
         resultado_hexadecimal = caracteres_hex[residuo] + resultado_hexadecimal
         valor = valor // 16  # Aquí se divide el número entre el número 16.
 
-    # Si el número original es 0, el resultado es cero.
     return resultado_hexadecimal
 
 def convertir_a_decimal_desde_binario(cadena_binaria):
@@ -75,8 +82,8 @@ def convertir_a_decimal_desde_binario(cadena_binaria):
     resultado_decimal = 0
     exponente = 0
 
-    #Se convierte de binario a decimal sumando las potencias del número 2.
-    for i in range(len(cadena_binaria) - 1, -1, -1):  #Aquí se recorre mi binario de derecha a izquierda.
+    # Se convierte de binario a decimal sumando las potencias del número 2.
+    for i in range(len(cadena_binaria) - 1, -1, -1):  # Aquí se recorre mi binario de derecha a izquierda.
         if cadena_binaria[i] == "1":  # Si el dígito es 1, suma la potencia del número 2.
             resultado_decimal += 2 ** exponente
         exponente += 1  # Incrementa la potencia(i++).
@@ -94,7 +101,6 @@ def convertir_a_decimal_desde_hexadecimal(cadena_hexadecimal):
     exponente = 0
 
     # Convierte el hexadecimal a decimal
-    # 16
     for i in range(len(cadena_hexadecimal) - 1, -1, -1):  # Recorre el hexadecimal de derecha a izquierda.
         valor = caracteres_hex.index(cadena_hexadecimal[i])  # Busca el valor del dígito en la tabla.
         resultado_decimal += valor * (16 ** exponente)  # Suma el valor del dígito por la potencia del número 16.
@@ -107,27 +113,25 @@ def convertir_a_binario_desde_hexadecimal(cadena_hexadecimal):
     return convertir_a_binario(decimal)
 
 def mostrar_menu_principal():
-    # Función d emi menú.
+    # Función de mi menú.
     print("`•.,¸¸,.•´¯🎀🌸CONVERSIÓN ENTRE SISTEMAS NÚMERICOS🌞🎀¯´•.,¸¸,.•`")
     print()
     print("1) Convertir de decimal a binario y hexadecimal.")
     print("2) Convertir de binario a decimal y hexadecimal.")
     print("3) Convertir de hexadecimal a decimal y binario.")
     print("0) Salir.")
-    seleccion= int(input("Ingresa una de las opciónes: "))
+    seleccion = int(input("Ingresa una de las opciones: "))
     print("---------------------------------------------------")
     print()
     return seleccion
-
 
 opcion_seleccionada = None
 while opcion_seleccionada != 0:
     opcion_seleccionada = mostrar_menu_principal()
 
     if opcion_seleccionada == 0:
-        #Fin de mi  programa.
-        print("Usted ha salido exitosamente del programa,¡Hasta luego!")
-        break
+        # Fin de mi programa.
+        print("Usted ha salido exitosamente del programa, ¡Hasta luego!")
 
     elif opcion_seleccionada == 1:
         # Convierte de decimal a binario y hexadecimal.
@@ -163,7 +167,7 @@ while opcion_seleccionada != 0:
         print()
 
     else:
-        #Si la opción no es válida.
+        # Si la opción no es válida.
         print("Opción no válida. Por favor, elige una opción entre 0 y 3.")
         print("---------------------------------------------------")
         print()
