@@ -50,7 +50,11 @@ print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓"
 print()
 print("----------------------------------------------------------------------------------")
 print()
-#Esta función la uso para convertir el texto a un lenguaje básico.
+
+# Variable global para guardar resultados
+resultado_conversion = {"resultado": ""}
+
+# Esta función la uso para convertir el texto a un lenguaje básico.
 def cambiar_a_basico(frase):
     # Mi diccionario para cambiar las vocales a lenguaje básico.
     cambio_vocales = {
@@ -65,16 +69,12 @@ def cambiar_a_basico(frase):
         'O': '0',
         'U': '(_)'
     }
-    #Estas variables me guardan el texto ya convertido.
-    resultado = ""
-    # Recorre cada letra y cambia si está en el diccionario.
+    resultado_conversion["resultado"] = ""  #El resultado anterior lo limpio.
     for letra in frase:
-        resultado += cambio_vocales.get(letra, letra)  #Lo deja igual si no está en el diccionario.
-    return resultado
+        resultado_conversion["resultado"] += cambio_vocales.get(letra, letra)
 
 # Esta función me convierte el texto a un lenguaje intermedio.
 def cambiar_a_intermedio(frase):
-    # Diccionario para cambiar letras a lenguaje intermedio.
     cambio_intermedio = {
         'a': '4',
         'b': 'I3',
@@ -102,7 +102,6 @@ def cambiar_a_intermedio(frase):
         'x': '><',
         'y': 'j',
         'z': '2',
-        #Para mis mayúsculas.
         'A': '4',
         'B': 'I3',
         'C': '[',
@@ -130,12 +129,9 @@ def cambiar_a_intermedio(frase):
         'Y': 'j',
         'Z': '2'
     }
-    #Aquí mi variable guarda el texto convertido.
-    resultado = ""
-    # Recorre cada letra y cambia si está en el diccionario.
+    resultado_conversion["resultado"] = ""  #El resultado anterior lo limpio.
     for letra in frase:
-        resultado += cambio_intermedio.get(letra, letra)  # Deja igual si no está en el diccionario.
-    return resultado
+        resultado_conversion["resultado"] += cambio_intermedio.get(letra, letra)
 
 # Función para mostrar mi menú.
 def mostrar_menu():
@@ -151,22 +147,22 @@ opcion_seleccionada = None
 while opcion_seleccionada != 0:
     opcion_seleccionada = mostrar_menu()
 
-    if opcion_seleccionada == 1:  #Opción 1.
-        texto = input("Introduce el texto para convertir a  lenguaje básico: ")
-        resultado = cambiar_a_basico(texto)
-        print("Texto convertido:", resultado)
+    if opcion_seleccionada == 1:  # Opción 1.
+        texto = input("Introduce el texto para convertir a lenguaje básico: ")
+        cambiar_a_basico(texto)
+        print("Texto convertido:", resultado_conversion["resultado"])
         print("---------------------------------------------------")
 
     elif opcion_seleccionada == 2:  # Si elige la opción 2.
         texto = input("Introduce el texto para convertir a lenguaje intermedio: ")
-        resultado = cambiar_a_intermedio(texto)
-        print("Texto convertido:", resultado)
+        cambiar_a_intermedio(texto)
+        print("Texto convertido:", resultado_conversion["resultado"])
         print("---------------------------------------------------")
 
-    elif opcion_seleccionada == 0:  #Opción 0.
-        print("Usted ha salido exitosamente del programa,Gracias por usarlo.")
+    elif opcion_seleccionada == 0:  # Opción 0.
+        print("Usted ha salido exitosamente del programa, ¡Gracias por usarlo!")
         print("---------------------------------------------------")
 
-    else:  #Cuando elige una opción no válida.
-        print("Opción no válida.Po favor intente nuevamente ingresando un número entre 0 y 2.")
+    else:  # Cuando elige una opción no válida.
+        print("Opción no válida. Por favor, intente nuevamente ingresando un número entre 0 y 2.")
         print("---------------------------------------------------")
