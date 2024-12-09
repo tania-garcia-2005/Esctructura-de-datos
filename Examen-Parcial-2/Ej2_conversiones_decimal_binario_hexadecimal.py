@@ -25,14 +25,6 @@ b) Asuma que el usuario siempre va a ingresar números en el formato adecuado. P
 c) Para considerar el ejercicio como completo, utilice funciones para mostrar el menú y para las conversiones entre bases, considerando que cada función devuelve una tupla. Por ejemplo, la función que recibe el número decimal debe devolver el valor en binario y en hexadecimal como una tupla.
 
 """
-# Mi portada.
-print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
-print("🍓🍓   Tania García Flores.        🍓🍓🍓")
-print("🍓🍓                                🍓🍓")
-print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
-print()
-print("----------------------------------------------------------------------------------")
-print()
 
 # Mi portada.
 print("🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓")
