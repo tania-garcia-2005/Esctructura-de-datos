@@ -161,6 +161,6 @@ while opcion != 0:  #Para hasta que el usuario seleccione la opción 0 (salir).
     elif opcion == 0:  #Si la opción es 0,Fin de mi programa.
         print("Usted ha salido exitosamente del programa.Gracias por usar este programa y hacer el Test.")
         print("---------------------------------------------------")
-    else:  #Por si la opci+on no es valida.
+    else:  #Por si la opción no es valida.
         print("Opción no válida.Por favor ingrese una opción entre 0 y 1.")
         print("---------------------------------------------------")
