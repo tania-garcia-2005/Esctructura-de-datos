@@ -99,15 +99,15 @@ def hacer_test():
     # Lista de preguntas con sus opciones y las casas que corresponde.
     preguntas = [
         ("¿Qué preferirías que la gente no dijera de ti?",
-         ["Ordinario (Gryffindor)", "Ignorante (Slytherin)", "Cobarde (Hufflepuff)", "Egoísta (Ravenclaw)"]),
+         ["Ordinario ", "Ignorante ", "Cobarde ", "Egoísta"]),#Si pongo en paréntesis las casas aparecen en la pantalla; si no, no.
         ("¿Qué te gustaría que hicieran al recordar tu nombre?",
-         ["Te extrañen (Gryffindor)", "Cuenten tus historias (Slytherin)", "Admiren tus logros (Hufflepuff)", "No me importa (Ravenclaw)"]),
+         ["Te extrañen", "Cuenten tus historias", "Admiren tus logros ", "No me importa"]),
         ("¿Qué poción te gustaría inventar?",
-         ["Gloria (Gryffindor)", "Poder (Slytherin)", "Amor (Hufflepuff)", "Sabiduría (Ravenclaw)"]),
+         ["Gloria ", "Poder", "Amor", "Sabiduría "]),
         ("¿Cómo te describirías en una palabra?",
-         ["Valiente (Gryffindor)", "Ambicioso (Slytherin)", "Leal (Hufflepuff)", "Curioso (Ravenclaw)"]),
+         ["Valiente", "Ambicioso ", "Leal", "Curioso"]),
         ("¿Qué cualidad te representa mejor?",
-         ["Fuerza (Gryffindor)", "Astucia (Slytherin)", "Paciencia (Hufflepuff)", "Inteligencia (Ravenclaw)"])
+         ["Fuerza ", "Astucia ", "Paciencia", "Inteligencia "])
     ]
 
     #Puntos para cada casa que los inicializo en 0.
