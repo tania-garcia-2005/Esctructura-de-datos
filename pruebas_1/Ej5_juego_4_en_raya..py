@@ -140,7 +140,7 @@ def jugar():
             print(f"¡Felicidades! El jugador {jugador_actual} ha ganado.")
             break
 
-        # Cambia al otro jugador
+        # Cambia al otro jugador.
         jugador_actual = 'O' if jugador_actual == 'X' else 'X'
 
 
